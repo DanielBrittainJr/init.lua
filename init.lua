@@ -31,14 +31,17 @@ vim.call('plug#begin', '~/.AppData/Local/nvim-data/site/autoload/')
 
 --Plug
 Plug 'gruvbox-community/gruvbox'
+Plug 'Rigellute/shades-of-purple.vim'
 
 vim.call('plug#end')
 
 --lazy way no lua vimscript
 vim.cmd [[
+if (has("termguicolors"))
+ set termguicolors
+endif
 
-set background=dark
-colorscheme gruvbox
+colorscheme shades_of_purple
 
 ]]
 
